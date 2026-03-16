@@ -1,0 +1,35 @@
+aid: apache-shardingsphere
+name: Apache ShardingSphere
+description: >-
+  Apache ShardingSphere is an open-source ecosystem for distributed database systems providing data sharding, distributed transactions, and database governance. It supports MySQL, PostgreSQL, and other databases with transparent sharding capabilities.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Database
+  - Sharding
+  - Distributed SQL
+  - Data Governance
+created: '2026-03-16'
+modified: '2026-03-16'
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: apache-shardingsphere:apache-shardingsphere
+    name: Apache ShardingSphere
+    description: >-
+      ShardingSphere provides ShardingSphere-JDBC for Java applications, ShardingSphere-Proxy with MySQL/PostgreSQL wire protocol compatibility, DistSQL for distributed database management, and a Governance API for cluster management.
+    humanURL: https://shardingsphere.apache.org/document/current/en/overview/
+    tags:
+      - JDBC
+      - SQL
+      - Proxy
+      - Sharding
+    properties:
+      - type: Documentation
+        url: https://shardingsphere.apache.org/document/current/en/overview/
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
