@@ -7,10 +7,10 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Database
-  - Sharding
-  - Distributed SQL
   - Data Governance
+  - Database
+  - Distributed SQL
+  - Sharding
 created: '2026-03-16'
 modified: '2026-03-16'
 url: >-
@@ -24,9 +24,9 @@ apis:
     humanURL: https://shardingsphere.apache.org/document/current/en/overview/
     tags:
       - JDBC
-      - SQL
       - Proxy
       - Sharding
+      - SQL
     properties:
       - type: Documentation
         url: https://shardingsphere.apache.org/document/current/en/overview/
