@@ -1,0 +1,130 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "shar": "https://shardingsphere.apache.org/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "DatabaseList": "shar:DatabaseList",
+    "Database": "shar:Database",
+    "DatabaseRequest": "shar:DatabaseRequest",
+    "DataSourceList": "shar:DataSourceList",
+    "DataSource": "shar:DataSource",
+    "DataSourceRequest": "shar:DataSourceRequest",
+    "ShardingRuleList": "shar:ShardingRuleList",
+    "ShardingRule": "shar:ShardingRule",
+    "ShardingTable": "shar:ShardingTable",
+    "ShardingStrategy": "shar:ShardingStrategy",
+    "ReadwriteSplittingRuleList": "shar:ReadwriteSplittingRuleList",
+    "ReadwriteSplittingRule": "shar:ReadwriteSplittingRule",
+    "ClusterStatus": "shar:ClusterStatus",
+    "Instance": "shar:Instance",
+    "databases": {
+      "@id": "shar:databases",
+      "@container": "@set"
+    },
+    "name": {
+      "@id": "shar:name",
+      "@type": "schema:name"
+    },
+    "dataSources": {
+      "@id": "shar:dataSources",
+      "@container": "@set"
+    },
+    "url": {
+      "@id": "shar:url",
+      "@type": "schema:url"
+    },
+    "username": {
+      "@id": "shar:username",
+      "@type": "xsd:string"
+    },
+    "maxPoolSize": {
+      "@id": "shar:maxPoolSize",
+      "@type": "xsd:integer"
+    },
+    "minPoolSize": {
+      "@id": "shar:minPoolSize",
+      "@type": "xsd:integer"
+    },
+    "type": {
+      "@id": "shar:type",
+      "@type": "xsd:string"
+    },
+    "password": {
+      "@id": "shar:password",
+      "@type": "xsd:string"
+    },
+    "rules": {
+      "@id": "shar:rules",
+      "@container": "@set"
+    },
+    "tables": {
+      "@id": "shar:tables",
+      "@container": "@set"
+    },
+    "bindingTables": {
+      "@id": "shar:bindingTables",
+      "@container": "@set"
+    },
+    "logicTable": {
+      "@id": "shar:logicTable",
+      "@type": "xsd:string"
+    },
+    "actualDataNodes": {
+      "@id": "shar:actualDataNodes",
+      "@type": "xsd:string"
+    },
+    "databaseStrategy": {
+      "@id": "shar:databaseStrategy",
+      "@type": "xsd:string"
+    },
+    "tableStrategy": {
+      "@id": "shar:tableStrategy",
+      "@type": "xsd:string"
+    },
+    "shardingColumn": {
+      "@id": "shar:shardingColumn",
+      "@type": "xsd:string"
+    },
+    "shardingAlgorithmName": {
+      "@id": "shar:shardingAlgorithmName",
+      "@type": "xsd:string"
+    },
+    "writeDataSourceName": {
+      "@id": "shar:writeDataSourceName",
+      "@type": "xsd:string"
+    },
+    "readDataSourceNames": {
+      "@id": "shar:readDataSourceNames",
+      "@container": "@set"
+    },
+    "loadBalancerName": {
+      "@id": "shar:loadBalancerName",
+      "@type": "xsd:string"
+    },
+    "mode": {
+      "@id": "shar:mode",
+      "@type": "xsd:string"
+    },
+    "instances": {
+      "@id": "shar:instances",
+      "@container": "@set"
+    },
+    "instanceId": {
+      "@id": "shar:instanceId",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "shar:status",
+      "@type": "xsd:string"
+    },
+    "host": {
+      "@id": "shar:host",
+      "@type": "xsd:string"
+    },
+    "port": {
+      "@id": "shar:port",
+      "@type": "xsd:integer"
+    }
+  }
+}

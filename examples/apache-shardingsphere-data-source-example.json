@@ -1,0 +1,8 @@
+{
+  "name": "example-name",
+  "url": "https://example.com",
+  "username": "example-name",
+  "maxPoolSize": 1234,
+  "minPoolSize": 1234,
+  "type": "example"
+}

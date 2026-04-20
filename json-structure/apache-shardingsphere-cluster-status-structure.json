@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-structure/apache-shardingsphere-cluster-status-structure.json",
+  "description": "ShardingSphere cluster status",
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "Standalone",
+        "Cluster"
+      ],
+      "description": "Deployment mode"
+    },
+    "instances": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Instance"
+      }
+    }
+  },
+  "name": "ClusterStatus"
+}

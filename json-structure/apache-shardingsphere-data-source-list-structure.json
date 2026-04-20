@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-structure/apache-shardingsphere-data-source-list-structure.json",
+  "description": "List of physical data sources",
+  "type": "object",
+  "properties": {
+    "dataSources": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/DataSource"
+      }
+    }
+  },
+  "name": "DataSourceList"
+}

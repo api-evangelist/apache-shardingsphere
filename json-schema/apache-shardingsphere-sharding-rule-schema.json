@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-schema/apache-shardingsphere-sharding-rule-schema.json",
+  "title": "ShardingRule",
+  "description": "Sharding rule for a logical table",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Rule name"
+    },
+    "tables": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ShardingTable"
+      }
+    },
+    "bindingTables": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-schema/apache-shardingsphere-database-request-schema.json",
+  "title": "DatabaseRequest",
+  "description": "Request to create a logical database",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Database name"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

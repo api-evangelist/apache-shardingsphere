@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-schema/apache-shardingsphere-sharding-rule-list-schema.json",
+  "title": "ShardingRuleList",
+  "description": "List of sharding rules",
+  "type": "object",
+  "properties": {
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ShardingRule"
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+name: Apache ShardingSphere Distributed SQL Workflow
+description: Workflow capability for managing distributed databases, sharding rules, and read-write splitting in Apache ShardingSphere.
+version: 1.0.0-alpha1
+apis:
+  - name: Apache ShardingSphere REST API
+    url: https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/apis.yml
+shared:
+  - url: capabilities/shared/shardingsphere-api.yaml
+workflow:
+  name: shardingsphere-workflow
+  description: Configure and manage distributed database sharding, read-write splitting, and data sources.
+  steps:
+    - name: create-database
+      description: Register a logical database
+      api: Apache ShardingSphere REST API
+      operation: createDatabase
+    - name: add-data-source
+      description: Register physical data sources
+      api: Apache ShardingSphere REST API
+      operation: addDataSource
+    - name: get-sharding-rules
+      description: Review sharding configuration
+      api: Apache ShardingSphere REST API
+      operation: getShardingRules
+    - name: get-readwrite-splitting-rules
+      description: Review read-write splitting configuration
+      api: Apache ShardingSphere REST API
+      operation: getReadwriteSplittingRules
+    - name: get-cluster-status
+      description: Monitor cluster health
+      api: Apache ShardingSphere REST API
+      operation: getClusterStatus
+exposes:
+  - type: rest
+    port: 3307
+    paths:
+      - /databases
+      - /databases/{databaseName}
+      - /databases/{databaseName}/data-sources
+      - /databases/{databaseName}/rules/sharding
+      - /databases/{databaseName}/rules/readwrite-splitting
+      - /cluster/status
+  - type: mcp
+    port: 9090
+    tools:
+      - name: list-databases
+        description: List logical databases
+        operation: listDatabases
+      - name: create-database
+        description: Create a logical database
+        operation: createDatabase
+      - name: list-data-sources
+        description: List data sources
+        operation: listDataSources
+      - name: add-data-source
+        description: Add a data source
+        operation: addDataSource
+      - name: get-sharding-rules
+        description: Get sharding rules
+        operation: getShardingRules
+      - name: get-readwrite-splitting-rules
+        description: Get read-write splitting rules
+        operation: getReadwriteSplittingRules
+      - name: get-cluster-status
+        description: Get cluster status
+        operation: getClusterStatus

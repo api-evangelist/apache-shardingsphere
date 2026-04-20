@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-structure/apache-shardingsphere-readwrite-splitting-rule-structure.json",
+  "description": "Read-write splitting configuration",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Rule name"
+    },
+    "writeDataSourceName": {
+      "type": "string",
+      "description": "Primary/write data source"
+    },
+    "readDataSourceNames": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Replica/read data sources"
+    },
+    "loadBalancerName": {
+      "type": "string",
+      "description": "Load balancer algorithm name"
+    }
+  },
+  "name": "ReadwriteSplittingRule"
+}

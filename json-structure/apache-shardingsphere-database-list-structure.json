@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-structure/apache-shardingsphere-database-list-structure.json",
+  "description": "List of ShardingSphere logical databases",
+  "type": "object",
+  "properties": {
+    "databases": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Database"
+      }
+    }
+  },
+  "name": "DatabaseList"
+}

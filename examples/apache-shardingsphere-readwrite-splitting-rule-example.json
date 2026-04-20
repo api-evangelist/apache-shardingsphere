@@ -1,0 +1,8 @@
+{
+  "name": "example-name",
+  "writeDataSourceName": "example-name",
+  "readDataSourceNames": [
+    "example"
+  ],
+  "loadBalancerName": "example-name"
+}

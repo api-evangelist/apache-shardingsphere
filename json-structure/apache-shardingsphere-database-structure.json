@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-structure/apache-shardingsphere-database-structure.json",
+  "description": "ShardingSphere logical database",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Database name"
+    },
+    "dataSources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Registered data source names"
+    }
+  },
+  "name": "Database"
+}

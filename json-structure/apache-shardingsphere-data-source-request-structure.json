@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-structure/apache-shardingsphere-data-source-request-structure.json",
+  "description": "Request to add a data source",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Data source name"
+    },
+    "url": {
+      "type": "string",
+      "description": "JDBC connection URL"
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "maxPoolSize": {
+      "type": "int32"
+    }
+  },
+  "required": [
+    "name",
+    "url",
+    "username",
+    "password"
+  ],
+  "name": "DataSourceRequest"
+}

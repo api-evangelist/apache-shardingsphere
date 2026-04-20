@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-structure/apache-shardingsphere-sharding-table-structure.json",
+  "description": "Sharding configuration for a logical table",
+  "type": "object",
+  "properties": {
+    "logicTable": {
+      "type": "string",
+      "description": "Logical table name"
+    },
+    "actualDataNodes": {
+      "type": "string",
+      "description": "Actual data nodes expression (e.g. ds${0..1}.orders${0..3})"
+    },
+    "databaseStrategy": {
+      "$ref": "#/components/schemas/ShardingStrategy"
+    },
+    "tableStrategy": {
+      "$ref": "#/components/schemas/ShardingStrategy"
+    }
+  },
+  "name": "ShardingTable"
+}

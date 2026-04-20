@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-schema/apache-shardingsphere-cluster-status-schema.json",
+  "title": "ClusterStatus",
+  "description": "ShardingSphere cluster status",
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string",
+      "enum": [
+        "Standalone",
+        "Cluster"
+      ],
+      "description": "Deployment mode"
+    },
+    "instances": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/Instance"
+      }
+    }
+  }
+}

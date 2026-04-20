@@ -1,0 +1,11 @@
+{
+  "name": "example-name",
+  "tables": [
+    {}
+  ],
+  "bindingTables": [
+    [
+      "example"
+    ]
+  ]
+}

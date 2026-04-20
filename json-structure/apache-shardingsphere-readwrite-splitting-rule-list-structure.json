@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/json-structure/apache-shardingsphere-readwrite-splitting-rule-list-structure.json",
+  "description": "List of read-write splitting rules",
+  "type": "object",
+  "properties": {
+    "rules": {
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/ReadwriteSplittingRule"
+      }
+    }
+  },
+  "name": "ReadwriteSplittingRuleList"
+}

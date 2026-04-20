@@ -1,0 +1,57 @@
+name: Apache ShardingSphere Vocabulary
+description: Unified taxonomy mapping distributed SQL resources, actions, workflows, and personas for Apache ShardingSphere.
+version: 1.0.0
+operational:
+  apis:
+    - name: Apache ShardingSphere REST API
+      description: REST API for managing distributed database configuration
+  resources:
+    - name: Database
+      description: Logical database aggregating physical data sources
+    - name: DataSource
+      description: Physical database connection configuration
+    - name: ShardingRule
+      description: Rule defining how data is distributed across shards
+    - name: ShardingTable
+      description: Logical table with sharding configuration
+    - name: ReadwriteSplittingRule
+      description: Configuration for primary/replica read-write splitting
+    - name: Instance
+      description: ShardingSphere Proxy instance
+  actions:
+    - name: Configure
+      description: Define sharding and splitting rules
+    - name: Register
+      description: Register databases and data sources
+    - name: Monitor
+      description: Monitor cluster and instance health
+    - name: Distribute
+      description: Distribute SQL queries across shards
+  authentication:
+    - name: Basic Auth
+      description: HTTP Basic authentication for proxy admin
+capability:
+  workflows:
+    - name: Sharding Configuration Workflow
+      description: Configure database sharding and read-write splitting
+    - name: Database Registration Workflow
+      description: Register databases and physical data sources
+  personas:
+    - name: Database Administrator
+      description: DBA managing distributed database topology
+    - name: Platform Engineer
+      description: Engineer deploying ShardingSphere Proxy
+    - name: Application Developer
+      description: Developer using ShardingSphere transparent sharding
+  domains:
+    - name: Distributed Databases
+      description: Horizontal scaling and data distribution across databases
+    - name: SQL Routing
+      description: Transparent SQL routing and federation
+  crossReference:
+    - name: MySQL
+      description: Common underlying database for ShardingSphere
+    - name: PostgreSQL
+      description: PostgreSQL support via ShardingSphere Proxy
+    - name: Apache ZooKeeper
+      description: Distributed coordination for cluster mode
