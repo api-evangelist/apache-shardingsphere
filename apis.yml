@@ -54,7 +54,7 @@ common:
   url: vocabulary/apache-shardingsphere-vocabulary.yaml
 - type: NaftikoCapability
   url: capabilities/shardingsphere-workflow.yaml
-- type: JSON-LD
+- type: JSONLD
   url: json-ld/apache-shardingsphere-context.jsonld
 - type: Features
   data:
