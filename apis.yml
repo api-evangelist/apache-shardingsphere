@@ -44,6 +44,8 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/showcase/apache-shardingsphere
 - type: GitHubOrganization
   url: https://github.com/apache/shardingsphere
 - type: Documentation

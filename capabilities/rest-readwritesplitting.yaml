@@ -1,0 +1,76 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Apache ShardingSphere REST API — ReadwriteSplitting
+  description: 'Apache ShardingSphere REST API — ReadwriteSplitting. 1 operations. Lead operation: Apache ShardingSphere Get
+    Readwrite Splitting Rules. Self-contained Naftiko capability covering one Apache Shardingsphere business surface.'
+  tags:
+  - Apache Shardingsphere
+  - ReadwriteSplitting
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    APACHE_SHARDINGSPHERE_API_KEY: APACHE_SHARDINGSPHERE_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: rest-readwritesplitting
+    baseUri: https://shardingsphere.example.com/api
+    description: Apache ShardingSphere REST API — ReadwriteSplitting business capability. Self-contained, no shared references.
+    resources:
+    - name: databases-databaseName-rules-readwrite-splitting
+      path: /databases/{databaseName}/rules/readwrite-splitting
+      operations:
+      - name: getreadwritesplittingrules
+        method: GET
+        description: Apache ShardingSphere Get Readwrite Splitting Rules
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: databaseName
+          in: path
+          type: string
+          required: true
+  exposes:
+  - type: rest
+    namespace: rest-readwritesplitting-rest
+    port: 8080
+    description: REST adapter for Apache ShardingSphere REST API — ReadwriteSplitting. One Spectral-compliant resource per
+      consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/databases/{databasename}/rules/readwrite-splitting
+      name: databases-databasename-rules-readwrite-splitting
+      description: REST surface for databases-databaseName-rules-readwrite-splitting.
+      operations:
+      - method: GET
+        name: getreadwritesplittingrules
+        description: Apache ShardingSphere Get Readwrite Splitting Rules
+        call: rest-readwritesplitting.getreadwritesplittingrules
+        with:
+          databaseName: rest.databaseName
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: rest-readwritesplitting-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Apache ShardingSphere REST API — ReadwriteSplitting. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: apache-shardingsphere-get-readwrite-splitting
+      description: Apache ShardingSphere Get Readwrite Splitting Rules
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: rest-readwritesplitting.getreadwritesplittingrules
+      with:
+        databaseName: tools.databaseName
+      outputParameters:
+      - type: object
+        mapping: $.
