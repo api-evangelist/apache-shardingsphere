@@ -44,6 +44,10 @@ maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
 common:
+  - type: VulnerabilityDisclosure
+    url: security/apache-shardingsphere-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/apache-shardingsphere-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/showcase/apache-shardingsphere
   - type: GitHubOrganization
