@@ -1,0 +1,117 @@
+openapi: 3.0.3
+info:
+  title: Apache ShardingSphere REST Cluster DataSources API
+  description: Apache ShardingSphere is a distributed SQL transaction and query engine that transforms any database into a distributed database system. This API provides REST endpoints for managing sharding rules, data sources, read-write splitting, and cluster configuration via DistSQL.
+  version: 5.4.0
+  contact:
+    name: Apache ShardingSphere
+    url: https://shardingsphere.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://shardingsphere.example.com/api
+  description: Apache ShardingSphere REST API
+tags:
+- name: DataSources
+paths:
+  /databases/{databaseName}/data-sources:
+    get:
+      operationId: listDataSources
+      summary: Apache ShardingSphere List Data Sources
+      description: List all physical data sources for a logical database.
+      tags:
+      - DataSources
+      x-microcks-operation:
+        dispatcher: URI_PARTS
+        dispatcherRules: databaseName
+      parameters:
+      - name: databaseName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: List of data sources
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DataSourceList'
+    post:
+      operationId: addDataSource
+      summary: Apache ShardingSphere Add Data Source
+      description: Register a physical data source for use with ShardingSphere.
+      tags:
+      - DataSources
+      x-microcks-operation:
+        dispatcher: URI_PARTS
+        dispatcherRules: databaseName
+      parameters:
+      - name: databaseName
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataSourceRequest'
+      responses:
+        '200':
+          description: Data source added
+components:
+  schemas:
+    DataSourceList:
+      type: object
+      description: List of physical data sources
+      properties:
+        dataSources:
+          type: array
+          items:
+            $ref: '#/components/schemas/DataSource'
+    DataSource:
+      type: object
+      description: Physical data source configuration
+      properties:
+        name:
+          type: string
+          description: Data source name
+        url:
+          type: string
+          description: JDBC connection URL
+        username:
+          type: string
+          description: Database username
+        maxPoolSize:
+          type: integer
+          description: Maximum connection pool size
+        minPoolSize:
+          type: integer
+          description: Minimum connection pool size
+        type:
+          type: string
+          description: Connection pool type (HikariCP, etc.)
+    DataSourceRequest:
+      type: object
+      description: Request to add a data source
+      required:
+      - name
+      - url
+      - username
+      - password
+      properties:
+        name:
+          type: string
+          description: Data source name
+        url:
+          type: string
+          description: JDBC connection URL
+        username:
+          type: string
+        password:
+          type: string
+        maxPoolSize:
+          type: integer

@@ -1,0 +1,99 @@
+openapi: 3.0.3
+info:
+  title: Apache ShardingSphere REST Cluster ShardingRules API
+  description: Apache ShardingSphere is a distributed SQL transaction and query engine that transforms any database into a distributed database system. This API provides REST endpoints for managing sharding rules, data sources, read-write splitting, and cluster configuration via DistSQL.
+  version: 5.4.0
+  contact:
+    name: Apache ShardingSphere
+    url: https://shardingsphere.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://shardingsphere.example.com/api
+  description: Apache ShardingSphere REST API
+tags:
+- name: ShardingRules
+paths:
+  /databases/{databaseName}/rules/sharding:
+    get:
+      operationId: getShardingRules
+      summary: Apache ShardingSphere Get Sharding Rules
+      description: Get sharding rules configured for a database.
+      tags:
+      - ShardingRules
+      x-microcks-operation:
+        dispatcher: URI_PARTS
+        dispatcherRules: databaseName
+      parameters:
+      - name: databaseName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Sharding rules
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ShardingRuleList'
+components:
+  schemas:
+    ShardingRuleList:
+      type: object
+      description: List of sharding rules
+      properties:
+        rules:
+          type: array
+          items:
+            $ref: '#/components/schemas/ShardingRule'
+    ShardingTable:
+      type: object
+      description: Sharding configuration for a logical table
+      properties:
+        logicTable:
+          type: string
+          description: Logical table name
+        actualDataNodes:
+          type: string
+          description: Actual data nodes expression (e.g. ds${0..1}.orders${0..3})
+        databaseStrategy:
+          $ref: '#/components/schemas/ShardingStrategy'
+        tableStrategy:
+          $ref: '#/components/schemas/ShardingStrategy'
+    ShardingRule:
+      type: object
+      description: Sharding rule for a logical table
+      properties:
+        name:
+          type: string
+          description: Rule name
+        tables:
+          type: array
+          items:
+            $ref: '#/components/schemas/ShardingTable'
+        bindingTables:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+    ShardingStrategy:
+      type: object
+      description: Sharding strategy definition
+      properties:
+        type:
+          type: string
+          enum:
+          - standard
+          - complex
+          - hint
+          - none
+          description: Strategy type
+        shardingColumn:
+          type: string
+          description: Column used for sharding
+        shardingAlgorithmName:
+          type: string
+          description: Sharding algorithm reference

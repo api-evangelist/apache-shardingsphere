@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: Apache ShardingSphere REST Cluster ReadwriteSplitting API
+  description: Apache ShardingSphere is a distributed SQL transaction and query engine that transforms any database into a distributed database system. This API provides REST endpoints for managing sharding rules, data sources, read-write splitting, and cluster configuration via DistSQL.
+  version: 5.4.0
+  contact:
+    name: Apache ShardingSphere
+    url: https://shardingsphere.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://shardingsphere.example.com/api
+  description: Apache ShardingSphere REST API
+tags:
+- name: ReadwriteSplitting
+paths:
+  /databases/{databaseName}/rules/readwrite-splitting:
+    get:
+      operationId: getReadwriteSplittingRules
+      summary: Apache ShardingSphere Get Readwrite Splitting Rules
+      description: Get read-write splitting rules configured for a database.
+      tags:
+      - ReadwriteSplitting
+      x-microcks-operation:
+        dispatcher: URI_PARTS
+        dispatcherRules: databaseName
+      parameters:
+      - name: databaseName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Readwrite splitting rules
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReadwriteSplittingRuleList'
+components:
+  schemas:
+    ReadwriteSplittingRule:
+      type: object
+      description: Read-write splitting configuration
+      properties:
+        name:
+          type: string
+          description: Rule name
+        writeDataSourceName:
+          type: string
+          description: Primary/write data source
+        readDataSourceNames:
+          type: array
+          items:
+            type: string
+          description: Replica/read data sources
+        loadBalancerName:
+          type: string
+          description: Load balancer algorithm name
+    ReadwriteSplittingRuleList:
+      type: object
+      description: List of read-write splitting rules
+      properties:
+        rules:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReadwriteSplittingRule'

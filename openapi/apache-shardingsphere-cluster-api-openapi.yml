@@ -1,0 +1,68 @@
+openapi: 3.0.3
+info:
+  title: Apache ShardingSphere REST Cluster API
+  description: Apache ShardingSphere is a distributed SQL transaction and query engine that transforms any database into a distributed database system. This API provides REST endpoints for managing sharding rules, data sources, read-write splitting, and cluster configuration via DistSQL.
+  version: 5.4.0
+  contact:
+    name: Apache ShardingSphere
+    url: https://shardingsphere.apache.org/
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: https://shardingsphere.example.com/api
+  description: Apache ShardingSphere REST API
+tags:
+- name: Cluster
+paths:
+  /cluster/status:
+    get:
+      operationId: getClusterStatus
+      summary: Apache ShardingSphere Get Cluster Status
+      description: Get the current status of the ShardingSphere cluster.
+      tags:
+      - Cluster
+      x-microcks-operation:
+        dispatcher: RANDOM
+      responses:
+        '200':
+          description: Cluster status
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClusterStatus'
+components:
+  schemas:
+    Instance:
+      type: object
+      description: ShardingSphere Proxy instance
+      properties:
+        instanceId:
+          type: string
+          description: Instance identifier
+        status:
+          type: string
+          enum:
+          - OK
+          - CIRCUIT_BREAKER
+          description: Instance status
+        host:
+          type: string
+          description: Host address
+        port:
+          type: integer
+          description: Port number
+    ClusterStatus:
+      type: object
+      description: ShardingSphere cluster status
+      properties:
+        mode:
+          type: string
+          enum:
+          - Standalone
+          - Cluster
+          description: Deployment mode
+        instances:
+          type: array
+          items:
+            $ref: '#/components/schemas/Instance'
