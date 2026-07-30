@@ -4,9 +4,21 @@ description: >-
   Apache ShardingSphere is an open-source ecosystem for distributed database systems providing data sharding, distributed transactions, and database governance. It supports MySQL, PostgreSQL, and other
   databases with transparent sharding capabilities.
 type: Index
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-shardingsphere.png
 tags:
   - Database
   - Distributed SQL
@@ -21,25 +33,72 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
-  - aid: apache-shardingsphere:apache-shardingsphere
-    name: Apache ShardingSphere
-    description: >-
-      ShardingSphere provides ShardingSphere-JDBC for Java applications, ShardingSphere-Proxy with MySQL/PostgreSQL wire protocol compatibility, DistSQL for distributed database management, and a Governance
-      API for cluster management.
-    humanURL: https://shardingsphere.apache.org/document/current/en/overview/
-    tags:
-    - Database
-    - Distributed SQL
-    - REST
-    - Apache
-    - Open Source
-    properties:
-    - type: Documentation
-      url: https://shardingsphere.apache.org/document/current/en/overview/
-    - type: Documentation
-      url: https://shardingsphere.apache.org/document/current/
-    - type: OpenAPI
-      url: openapi/apache-shardingsphere-rest-api.yaml
+- aid: apache-shardingsphere:apache-shardingsphere-cluster-api
+  name: Apache ShardingSphere Cluster API
+  description: The Cluster API from Apache ShardingSphere — 1 operation(s) for cluster.
+  humanURL: https://shardingsphere.apache.org/document/current/en/overview/
+  tags:
+  - Cluster
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-shardingsphere-cluster-api-openapi.yml
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/en/overview/
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/
+- aid: apache-shardingsphere:apache-shardingsphere-databases-api
+  name: Apache ShardingSphere Databases API
+  description: The Databases API from Apache ShardingSphere — 2 operation(s) for databases.
+  humanURL: https://shardingsphere.apache.org/document/current/en/overview/
+  tags:
+  - Databases
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-shardingsphere-databases-api-openapi.yml
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/en/overview/
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/
+- aid: apache-shardingsphere:apache-shardingsphere-datasources-api
+  name: Apache ShardingSphere DataSources API
+  description: The DataSources API from Apache ShardingSphere — 1 operation(s) for datasources.
+  humanURL: https://shardingsphere.apache.org/document/current/en/overview/
+  tags:
+  - DataSources
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-shardingsphere-datasources-api-openapi.yml
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/en/overview/
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/
+- aid: apache-shardingsphere:apache-shardingsphere-readwritesplitting-api
+  name: Apache ShardingSphere ReadwriteSplitting API
+  description: >-
+    The ReadwriteSplitting API from Apache ShardingSphere — 1 operation(s) for readwritesplitting.
+  humanURL: https://shardingsphere.apache.org/document/current/en/overview/
+  tags:
+  - ReadwriteSplitting
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-shardingsphere-readwritesplitting-api-openapi.yml
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/en/overview/
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/
+- aid: apache-shardingsphere:apache-shardingsphere-shardingrules-api
+  name: Apache ShardingSphere ShardingRules API
+  description: The ShardingRules API from Apache ShardingSphere — 1 operation(s) for shardingrules.
+  humanURL: https://shardingsphere.apache.org/document/current/en/overview/
+  tags:
+  - ShardingRules
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-shardingsphere-shardingrules-api-openapi.yml
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/en/overview/
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
