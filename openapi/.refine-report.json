@@ -1,0 +1,22 @@
+{
+  "provider": "apache-shardingsphere",
+  "sources": [
+    "apache-shardingsphere-cluster-api-openapi.yml",
+    "apache-shardingsphere-databases-api-openapi.yml",
+    "apache-shardingsphere-datasources-api-openapi.yml",
+    "apache-shardingsphere-readwritesplitting-api-openapi.yml",
+    "apache-shardingsphere-shardingrules-api-openapi.yml"
+  ],
+  "outputs": [
+    "apache-shardingsphere-cluster-api-openapi.yml",
+    "apache-shardingsphere-databases-api-openapi.yml",
+    "apache-shardingsphere-datasources-api-openapi.yml",
+    "apache-shardingsphere-readwritesplitting-api-openapi.yml",
+    "apache-shardingsphere-shardingrules-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
