@@ -119,8 +119,6 @@ common:
     url: rules/apache-shardingsphere-spectral-rules.yml
   - type: Vocabulary
     url: vocabulary/apache-shardingsphere-vocabulary.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/shardingsphere-workflow.yaml
   - type: JSONLD
     url: json-ld/apache-shardingsphere-context.jsonld
   - type: Features
