@@ -1,0 +1,58 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache ShardingSphere REST Cluster DataSources API",
+    "version": "5.4.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DataSources",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache ShardingSphere List Data Sources",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shardingsphere.example.com/api/databases/:databaseName/data-sources",
+            "params": [
+              {
+                "name": "databaseName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List all physical data sources for a logical database."
+        },
+        {
+          "info": {
+            "name": "Apache ShardingSphere Add Data Source",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shardingsphere.example.com/api/databases/:databaseName/data-sources",
+            "params": [
+              {
+                "name": "databaseName",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Register a physical data source for use with ShardingSphere."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,124 @@
+{
+  "item": [
+    {
+      "id": "e1acc997-132b-4a40-9c42-1322599eda2a",
+      "name": "ReadwriteSplitting",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "88424919-b6f5-496c-8aef-9d244f5389cb",
+          "name": "Apache ShardingSphere Get Readwrite Splitting Rules",
+          "request": {
+            "name": "Apache ShardingSphere Get Readwrite Splitting Rules",
+            "description": {
+              "content": "Get read-write splitting rules configured for a database.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "databases",
+                ":databaseName",
+                "rules",
+                "readwrite-splitting"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "databaseName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5d35d08f-2ca6-4ed2-8265-69fcb257f5fb",
+              "name": "Readwrite splitting rules",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "databases",
+                    ":databaseName",
+                    "rules",
+                    "readwrite-splitting"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "databaseName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"rules\": [\n    {\n      \"name\": \"string\",\n      \"writeDataSourceName\": \"string\",\n      \"readDataSourceNames\": [\n        \"string\",\n        \"string\"\n      ],\n      \"loadBalancerName\": \"string\"\n    },\n    {\n      \"name\": \"string\",\n      \"writeDataSourceName\": \"string\",\n      \"readDataSourceNames\": [\n        \"string\",\n        \"string\"\n      ],\n      \"loadBalancerName\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://shardingsphere.example.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "79ed9a8d-fccc-4661-b605-fad3231e7e78",
+    "name": "Apache ShardingSphere REST Cluster ReadwriteSplitting API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Apache ShardingSphere is a distributed SQL transaction and query engine that transforms any database into a distributed database system. This API provides REST endpoints for managing sharding rules, data sources, read-write splitting, and cluster configuration via DistSQL.\n\nContact Support:\n Name: Apache ShardingSphere",
+      "type": "text/plain"
+    }
+  }
+}

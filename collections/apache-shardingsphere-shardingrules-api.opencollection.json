@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache ShardingSphere REST Cluster ShardingRules API",
+    "version": "5.4.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ShardingRules",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache ShardingSphere Get Sharding Rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shardingsphere.example.com/api/databases/:databaseName/rules/sharding",
+            "params": [
+              {
+                "name": "databaseName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get sharding rules configured for a database."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

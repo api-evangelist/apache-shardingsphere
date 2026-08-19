@@ -1,0 +1,104 @@
+{
+  "item": [
+    {
+      "id": "e0fd6dcb-9bde-4589-9efd-da4ddd590d72",
+      "name": "Cluster",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d82a2f48-2761-4993-bc61-65903f7fb747",
+          "name": "Apache ShardingSphere Get Cluster Status",
+          "request": {
+            "name": "Apache ShardingSphere Get Cluster Status",
+            "description": {
+              "content": "Get the current status of the ShardingSphere cluster.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cluster",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2ce13022-0713-49bc-a3cd-4062ee9d3811",
+              "name": "Cluster status",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cluster",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"mode\": \"Cluster\",\n  \"instances\": [\n    {\n      \"instanceId\": \"string\",\n      \"status\": \"CIRCUIT_BREAKER\",\n      \"host\": \"string\",\n      \"port\": 5359\n    },\n    {\n      \"instanceId\": \"string\",\n      \"status\": \"OK\",\n      \"host\": \"string\",\n      \"port\": 1052\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://shardingsphere.example.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6b57148b-bc05-4c30-9bf3-626b3933c6e5",
+    "name": "Apache ShardingSphere REST Cluster API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Apache ShardingSphere is a distributed SQL transaction and query engine that transforms any database into a distributed database system. This API provides REST endpoints for managing sharding rules, data sources, read-write splitting, and cluster configuration via DistSQL.\n\nContact Support:\n Name: Apache ShardingSphere",
+      "type": "text/plain"
+    }
+  }
+}

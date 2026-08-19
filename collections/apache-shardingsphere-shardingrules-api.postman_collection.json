@@ -1,0 +1,124 @@
+{
+  "item": [
+    {
+      "id": "c2a0b720-a69a-47f5-9e64-39731b28d248",
+      "name": "ShardingRules",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "056b69e6-d503-4314-879e-626d0513250d",
+          "name": "Apache ShardingSphere Get Sharding Rules",
+          "request": {
+            "name": "Apache ShardingSphere Get Sharding Rules",
+            "description": {
+              "content": "Get sharding rules configured for a database.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "databases",
+                ":databaseName",
+                "rules",
+                "sharding"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "databaseName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f4efd936-2b72-4338-bf77-b5cbbe435304",
+              "name": "Sharding rules",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "databases",
+                    ":databaseName",
+                    "rules",
+                    "sharding"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "databaseName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"rules\": [\n    {\n      \"name\": \"string\",\n      \"tables\": [\n        {\n          \"logicTable\": \"string\",\n          \"actualDataNodes\": \"string\",\n          \"databaseStrategy\": {\n            \"type\": \"none\",\n            \"shardingColumn\": \"string\",\n            \"shardingAlgorithmName\": \"string\"\n          },\n          \"tableStrategy\": {\n            \"type\": \"none\",\n            \"shardingColumn\": \"string\",\n            \"shardingAlgorithmName\": \"string\"\n          }\n        },\n        {\n          \"logicTable\": \"string\",\n          \"actualDataNodes\": \"string\",\n          \"databaseStrategy\": {\n            \"type\": \"hint\",\n            \"shardingColumn\": \"string\",\n            \"shardingAlgorithmName\": \"string\"\n          },\n          \"tableStrategy\": {\n            \"type\": \"standard\",\n            \"shardingColumn\": \"string\",\n            \"shardingAlgorithmName\": \"string\"\n          }\n        }\n      ],\n      \"bindingTables\": [\n        [\n          \"string\",\n          \"string\"\n        ],\n        [\n          \"string\",\n          \"string\"\n        ]\n      ]\n    },\n    {\n      \"name\": \"string\",\n      \"tables\": [\n        {\n          \"logicTable\": \"string\",\n          \"actualDataNodes\": \"string\",\n          \"databaseStrategy\": {\n            \"type\": \"standard\",\n            \"shardingColumn\": \"string\",\n            \"shardingAlgorithmName\": \"string\"\n          },\n          \"tableStrategy\": {\n            \"type\": \"hint\",\n            \"shardingColumn\": \"string\",\n            \"shardingAlgorithmName\": \"string\"\n          }\n        },\n        {\n          \"logicTable\": \"string\",\n          \"actualDataNodes\": \"string\",\n          \"databaseStrategy\": {\n            \"type\": \"complex\",\n            \"shardingColumn\": \"string\",\n            \"shardingAlgorithmName\": \"string\"\n          },\n          \"tableStrategy\": {\n            \"type\": \"complex\",\n            \"shardingColumn\": \"string\",\n            \"shardingAlgorithmName\": \"string\"\n          }\n        }\n      ],\n      \"bindingTables\": [\n        [\n          \"string\",\n          \"string\"\n        ],\n        [\n          \"string\",\n          \"string\"\n        ]\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://shardingsphere.example.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "25b8a531-1bb8-4def-86cd-906c96f427f8",
+    "name": "Apache ShardingSphere REST Cluster ShardingRules API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Apache ShardingSphere is a distributed SQL transaction and query engine that transforms any database into a distributed database system. This API provides REST endpoints for managing sharding rules, data sources, read-write splitting, and cluster configuration via DistSQL.\n\nContact Support:\n Name: Apache ShardingSphere",
+      "type": "text/plain"
+    }
+  }
+}

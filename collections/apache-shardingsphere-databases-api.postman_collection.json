@@ -1,0 +1,357 @@
+{
+  "item": [
+    {
+      "id": "7b2a8a77-ea13-4d38-997f-81770f6ddb85",
+      "name": "Databases",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "56b54975-ba0f-4e25-b3eb-97bc66ebce65",
+          "name": "Apache ShardingSphere List Databases",
+          "request": {
+            "name": "Apache ShardingSphere List Databases",
+            "description": {
+              "content": "List all logical databases registered in ShardingSphere.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "databases"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4d0bd4f8-8863-4d4c-85e2-6cb30cec7e14",
+              "name": "List of databases",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "databases"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"databases\": [\n    {\n      \"name\": \"string\",\n      \"dataSources\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"name\": \"string\",\n      \"dataSources\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "714039e3-7011-46d5-864f-694381cd43f9",
+          "name": "Apache ShardingSphere Create Database",
+          "request": {
+            "name": "Apache ShardingSphere Create Database",
+            "description": {
+              "content": "Register a new logical database in ShardingSphere.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "databases"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e9381081-7190-4284-bc33-60ab9190db1f",
+              "name": "Database created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "databases"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"dataSources\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "05ac38a8-a499-4c0f-8235-dd41669bf563",
+          "name": "Apache ShardingSphere Get Database",
+          "request": {
+            "name": "Apache ShardingSphere Get Database",
+            "description": {
+              "content": "Get details of a specific ShardingSphere database.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "databases",
+                ":databaseName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "databaseName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c375ea0c-eeff-4bb7-88af-07291af24a2c",
+              "name": "Database details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "databases",
+                    ":databaseName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "databaseName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"string\",\n  \"dataSources\": [\n    \"string\",\n    \"string\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e37eb8e2-b43d-4e9c-8447-22f4cba8d0c1",
+          "name": "Apache ShardingSphere Delete Database",
+          "request": {
+            "name": "Apache ShardingSphere Delete Database",
+            "description": {
+              "content": "Unregister a logical database from ShardingSphere.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "databases",
+                ":databaseName"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "databaseName",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "659adb49-285d-42c4-bf86-fd106fa7c105",
+              "name": "Database deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "databases",
+                    ":databaseName"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "databaseName",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://shardingsphere.example.com/api",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d1d437e5-a866-41c0-8715-38268eb412a7",
+    "name": "Apache ShardingSphere REST Cluster Databases API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Apache ShardingSphere is a distributed SQL transaction and query engine that transforms any database into a distributed database system. This API provides REST endpoints for managing sharding rules, data sources, read-write splitting, and cluster configuration via DistSQL.\n\nContact Support:\n Name: Apache ShardingSphere",
+      "type": "text/plain"
+    }
+  }
+}

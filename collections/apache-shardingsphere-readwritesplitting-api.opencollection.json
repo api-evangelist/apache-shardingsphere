@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache ShardingSphere REST Cluster ReadwriteSplitting API",
+    "version": "5.4.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ReadwriteSplitting",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache ShardingSphere Get Readwrite Splitting Rules",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shardingsphere.example.com/api/databases/:databaseName/rules/readwrite-splitting",
+            "params": [
+              {
+                "name": "databaseName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get read-write splitting rules configured for a database."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

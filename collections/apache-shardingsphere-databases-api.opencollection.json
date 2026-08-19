@@ -1,0 +1,80 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Apache ShardingSphere REST Cluster Databases API",
+    "version": "5.4.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Databases",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Apache ShardingSphere List Databases",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shardingsphere.example.com/api/databases"
+          },
+          "docs": "List all logical databases registered in ShardingSphere."
+        },
+        {
+          "info": {
+            "name": "Apache ShardingSphere Create Database",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://shardingsphere.example.com/api/databases",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Register a new logical database in ShardingSphere."
+        },
+        {
+          "info": {
+            "name": "Apache ShardingSphere Get Database",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://shardingsphere.example.com/api/databases/:databaseName",
+            "params": [
+              {
+                "name": "databaseName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get details of a specific ShardingSphere database."
+        },
+        {
+          "info": {
+            "name": "Apache ShardingSphere Delete Database",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://shardingsphere.example.com/api/databases/:databaseName",
+            "params": [
+              {
+                "name": "databaseName",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Unregister a logical database from ShardingSphere."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
