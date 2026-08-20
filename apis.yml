@@ -26,6 +26,14 @@ tags:
   - Sharding
   - SQL
   - Apache
+  - Open-Source
+tags_raw:
+  - Database
+  - Distributed SQL
+  - Read-Write Splitting
+  - Sharding
+  - SQL
+  - Apache
   - Open Source
 created: '2026-03-16'
 modified: '2026-04-19'
@@ -64,6 +72,8 @@ apis:
   description: The DataSources API from Apache ShardingSphere — 1 operation(s) for datasources.
   humanURL: https://shardingsphere.apache.org/document/current/en/overview/
   tags:
+  - Data Sources
+  tags_raw:
   - DataSources
   properties:
   - type: OpenAPI
@@ -78,6 +88,8 @@ apis:
     The ReadwriteSplitting API from Apache ShardingSphere — 1 operation(s) for readwritesplitting.
   humanURL: https://shardingsphere.apache.org/document/current/en/overview/
   tags:
+  - Read-Write Splitting
+  tags_raw:
   - ReadwriteSplitting
   properties:
   - type: OpenAPI
