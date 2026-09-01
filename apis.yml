@@ -83,7 +83,7 @@ apis:
   description: The DataSources API from Apache ShardingSphere — 1 operation(s) for datasources.
   humanURL: https://shardingsphere.apache.org/document/current/en/overview/
   tags:
-  - DataSources
+  - Data Sources
   tags_raw:
   - DataSources
   properties:
@@ -99,7 +99,7 @@ apis:
     The ReadwriteSplitting API from Apache ShardingSphere — 1 operation(s) for readwritesplitting.
   humanURL: https://shardingsphere.apache.org/document/current/en/overview/
   tags:
-  - ReadwriteSplitting
+  - Read-Write Splitting
   tags_raw:
   - ReadwriteSplitting
   properties:
