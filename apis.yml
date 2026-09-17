@@ -77,24 +77,10 @@ apis:
     url: https://shardingsphere.apache.org/document/current/en/overview/
   - type: Documentation
     url: https://shardingsphere.apache.org/document/current/
-- aid: apache-shardingsphere:apache-shardingsphere-datasources-api
-  name: Apache ShardingSphere DataSources API
-  description: The DataSources API from Apache ShardingSphere — 1 operation(s) for datasources.
-  humanURL: https://shardingsphere.apache.org/document/current/en/overview/
-  tags:
-  - Data Sources
-  tags_raw:
-  - DataSources
-  properties:
-  - type: OpenAPI
-    url: openapi/apache-shardingsphere-datasources-api-openapi.yml
-  - type: Documentation
-    url: https://shardingsphere.apache.org/document/current/en/overview/
-  - type: Documentation
-    url: https://shardingsphere.apache.org/document/current/
 - aid: apache-shardingsphere:apache-shardingsphere-readwritesplitting-api
   name: Apache ShardingSphere ReadwriteSplitting API
-  description: The ReadwriteSplitting API from Apache ShardingSphere — 1 operation(s) for readwritesplitting.
+  description: >-
+    The ReadwriteSplitting API from Apache ShardingSphere — 1 operation(s) for readwritesplitting.
   humanURL: https://shardingsphere.apache.org/document/current/en/overview/
   tags:
   - Read-Write Splitting
@@ -116,6 +102,19 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/apache-shardingsphere-shardingrules-api-openapi.yml
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/en/overview/
+  - type: Documentation
+    url: https://shardingsphere.apache.org/document/current/
+- aid: apache-shardingsphere:apache-shardingsphere-data-sources-api
+  name: Apache ShardingSphere Data Sources API
+  description: The Data Sources API from Apache ShardingSphere — 1 operation(s) for data sources.
+  humanURL: https://shardingsphere.apache.org/document/current/en/overview/
+  tags:
+  - Data Sources
+  properties:
+  - type: OpenAPI
+    url: openapi/apache-shardingsphere-data-sources-api-openapi.yml
   - type: Documentation
     url: https://shardingsphere.apache.org/document/current/en/overview/
   - type: Documentation
