@@ -69,6 +69,8 @@ apis:
   description: The Databases API from Apache ShardingSphere — 2 operation(s) for databases.
   humanURL: https://shardingsphere.apache.org/document/current/en/overview/
   tags:
+  - Database
+  tags_raw:
   - Databases
   properties:
   - type: OpenAPI
