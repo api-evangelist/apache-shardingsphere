@@ -1,22 +1,36 @@
 {
   "provider": "apache-shardingsphere",
   "sources": [
-    "apache-shardingsphere-cluster-api-openapi.yml",
-    "apache-shardingsphere-databases-api-openapi.yml",
-    "apache-shardingsphere-datasources-api-openapi.yml",
-    "apache-shardingsphere-readwritesplitting-api-openapi.yml",
-    "apache-shardingsphere-shardingrules-api-openapi.yml"
+    "_original/apache-shardingsphere-rest-api.yaml"
   ],
   "outputs": [
     "apache-shardingsphere-cluster-api-openapi.yml",
-    "apache-shardingsphere-databases-api-openapi.yml",
     "apache-shardingsphere-datasources-api-openapi.yml",
+    "apache-shardingsphere-databases-api-openapi.yml",
     "apache-shardingsphere-readwritesplitting-api-openapi.yml",
     "apache-shardingsphere-shardingrules-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "apache-shardingsphere-rest-api.yaml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "apache-shardingsphere-rest-api.yaml: declared missing tag: Cluster",
+    "apache-shardingsphere-rest-api.yaml: declared missing tag: DataSources",
+    "apache-shardingsphere-rest-api.yaml: declared missing tag: Databases",
+    "apache-shardingsphere-rest-api.yaml: declared missing tag: ReadwriteSplitting",
+    "apache-shardingsphere-rest-api.yaml: declared missing tag: ShardingRules",
+    "superseded outputs removed: apache-shardingsphere-data-sources-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 5 total)"
+  ],
+  "skipped": [
+    "apache-shardingsphere-cluster-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-shardingsphere-data-sources-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-shardingsphere-databases-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-shardingsphere-readwritesplitting-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "apache-shardingsphere-shardingrules-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
