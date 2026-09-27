@@ -37,7 +37,7 @@ tags:
 - Sharding
 - SQL
 - Apache
-- Open-Source
+- Open Source
 tags_raw:
 - Database
 - Distributed SQL
@@ -46,6 +46,7 @@ tags_raw:
 - SQL
 - Apache
 - Open Source
+- Open-Source
 created: '2026-03-16'
 modified: '2026-09-16'
 url: https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/apis.yml

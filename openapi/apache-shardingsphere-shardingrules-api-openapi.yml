@@ -40,41 +40,6 @@ paths:
                 $ref: '#/components/schemas/ShardingRuleList'
 components:
   schemas:
-    ShardingStrategy:
-      type: object
-      description: Sharding strategy definition
-      properties:
-        type:
-          type: string
-          enum:
-          - standard
-          - complex
-          - hint
-          - none
-          description: Strategy type
-        shardingColumn:
-          type: string
-          description: Column used for sharding
-        shardingAlgorithmName:
-          type: string
-          description: Sharding algorithm reference
-    ShardingRule:
-      type: object
-      description: Sharding rule for a logical table
-      properties:
-        name:
-          type: string
-          description: Rule name
-        tables:
-          type: array
-          items:
-            $ref: '#/components/schemas/ShardingTable'
-        bindingTables:
-          type: array
-          items:
-            type: array
-            items:
-              type: string
     ShardingTable:
       type: object
       description: Sharding configuration for a logical table
@@ -97,3 +62,38 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ShardingRule'
+    ShardingRule:
+      type: object
+      description: Sharding rule for a logical table
+      properties:
+        name:
+          type: string
+          description: Rule name
+        tables:
+          type: array
+          items:
+            $ref: '#/components/schemas/ShardingTable'
+        bindingTables:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+    ShardingStrategy:
+      type: object
+      description: Sharding strategy definition
+      properties:
+        type:
+          type: string
+          enum:
+          - standard
+          - complex
+          - hint
+          - none
+          description: Strategy type
+        shardingColumn:
+          type: string
+          description: Column used for sharding
+        shardingAlgorithmName:
+          type: string
+          description: Sharding algorithm reference
