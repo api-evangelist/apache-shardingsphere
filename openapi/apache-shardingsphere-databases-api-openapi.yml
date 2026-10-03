@@ -95,23 +95,6 @@ paths:
           description: Database deleted
 components:
   schemas:
-    DatabaseRequest:
-      type: object
-      description: Request to create a logical database
-      required:
-      - name
-      properties:
-        name:
-          type: string
-          description: Database name
-    DatabaseList:
-      type: object
-      description: List of ShardingSphere logical databases
-      properties:
-        databases:
-          type: array
-          items:
-            $ref: '#/components/schemas/Database'
     Database:
       type: object
       description: ShardingSphere logical database
@@ -124,3 +107,20 @@ components:
           items:
             type: string
           description: Registered data source names
+    DatabaseList:
+      type: object
+      description: List of ShardingSphere logical databases
+      properties:
+        databases:
+          type: array
+          items:
+            $ref: '#/components/schemas/Database'
+    DatabaseRequest:
+      type: object
+      description: Request to create a logical database
+      required:
+      - name
+      properties:
+        name:
+          type: string
+          description: Database name

@@ -64,6 +64,35 @@ paths:
           description: Data source added
 components:
   schemas:
+    DataSourceList:
+      type: object
+      description: List of physical data sources
+      properties:
+        dataSources:
+          type: array
+          items:
+            $ref: '#/components/schemas/DataSource'
+    DataSourceRequest:
+      type: object
+      description: Request to add a data source
+      required:
+      - name
+      - url
+      - username
+      - password
+      properties:
+        name:
+          type: string
+          description: Data source name
+        url:
+          type: string
+          description: JDBC connection URL
+        username:
+          type: string
+        password:
+          type: string
+        maxPoolSize:
+          type: integer
     DataSource:
       type: object
       description: Physical data source configuration
@@ -86,32 +115,3 @@ components:
         type:
           type: string
           description: Connection pool type (HikariCP, etc.)
-    DataSourceRequest:
-      type: object
-      description: Request to add a data source
-      required:
-      - name
-      - url
-      - username
-      - password
-      properties:
-        name:
-          type: string
-          description: Data source name
-        url:
-          type: string
-          description: JDBC connection URL
-        username:
-          type: string
-        password:
-          type: string
-        maxPoolSize:
-          type: integer
-    DataSourceList:
-      type: object
-      description: List of physical data sources
-      properties:
-        dataSources:
-          type: array
-          items:
-            $ref: '#/components/schemas/DataSource'
