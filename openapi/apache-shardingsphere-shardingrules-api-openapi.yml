@@ -40,6 +40,37 @@ paths:
                 $ref: '#/components/schemas/ShardingRuleList'
 components:
   schemas:
+    ShardingRule:
+      type: object
+      description: Sharding rule for a logical table
+      properties:
+        name:
+          type: string
+          description: Rule name
+        tables:
+          type: array
+          items:
+            $ref: '#/components/schemas/ShardingTable'
+        bindingTables:
+          type: array
+          items:
+            type: array
+            items:
+              type: string
+    ShardingTable:
+      type: object
+      description: Sharding configuration for a logical table
+      properties:
+        logicTable:
+          type: string
+          description: Logical table name
+        actualDataNodes:
+          type: string
+          description: Actual data nodes expression (e.g. ds${0..1}.orders${0..3})
+        databaseStrategy:
+          $ref: '#/components/schemas/ShardingStrategy'
+        tableStrategy:
+          $ref: '#/components/schemas/ShardingStrategy'
     ShardingStrategy:
       type: object
       description: Sharding strategy definition
@@ -58,23 +89,6 @@ components:
         shardingAlgorithmName:
           type: string
           description: Sharding algorithm reference
-    ShardingRule:
-      type: object
-      description: Sharding rule for a logical table
-      properties:
-        name:
-          type: string
-          description: Rule name
-        tables:
-          type: array
-          items:
-            $ref: '#/components/schemas/ShardingTable'
-        bindingTables:
-          type: array
-          items:
-            type: array
-            items:
-              type: string
     ShardingRuleList:
       type: object
       description: List of sharding rules
@@ -83,17 +97,3 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ShardingRule'
-    ShardingTable:
-      type: object
-      description: Sharding configuration for a logical table
-      properties:
-        logicTable:
-          type: string
-          description: Logical table name
-        actualDataNodes:
-          type: string
-          description: Actual data nodes expression (e.g. ds${0..1}.orders${0..3})
-        databaseStrategy:
-          $ref: '#/components/schemas/ShardingStrategy'
-        tableStrategy:
-          $ref: '#/components/schemas/ShardingStrategy'

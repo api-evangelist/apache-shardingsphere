@@ -64,14 +64,6 @@ paths:
           description: Data source added
 components:
   schemas:
-    DataSourceList:
-      type: object
-      description: List of physical data sources
-      properties:
-        dataSources:
-          type: array
-          items:
-            $ref: '#/components/schemas/DataSource'
     DataSourceRequest:
       type: object
       description: Request to add a data source
@@ -115,3 +107,11 @@ components:
         type:
           type: string
           description: Connection pool type (HikariCP, etc.)
+    DataSourceList:
+      type: object
+      description: List of physical data sources
+      properties:
+        dataSources:
+          type: array
+          items:
+            $ref: '#/components/schemas/DataSource'
