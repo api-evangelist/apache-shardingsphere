@@ -126,6 +126,12 @@ maintainers:
 - FN: Kin Lane
   email: info@apievangelist.com
 common:
+- type: Plans
+  url: plans/apache-shardingsphere-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/apache-shardingsphere-rate-limits.yml
+- type: FinOps
+  url: finops/apache-shardingsphere-finops.yml
 - type: Website
   url: https://apache.org
 - type: AgenticAccess
