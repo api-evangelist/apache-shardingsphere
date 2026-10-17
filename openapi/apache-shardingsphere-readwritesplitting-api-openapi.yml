@@ -40,6 +40,14 @@ paths:
                 $ref: '#/components/schemas/ReadwriteSplittingRuleList'
 components:
   schemas:
+    ReadwriteSplittingRuleList:
+      type: object
+      description: List of read-write splitting rules
+      properties:
+        rules:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReadwriteSplittingRule'
     ReadwriteSplittingRule:
       type: object
       description: Read-write splitting configuration
@@ -58,11 +66,3 @@ components:
         loadBalancerName:
           type: string
           description: Load balancer algorithm name
-    ReadwriteSplittingRuleList:
-      type: object
-      description: List of read-write splitting rules
-      properties:
-        rules:
-          type: array
-          items:
-            $ref: '#/components/schemas/ReadwriteSplittingRule'

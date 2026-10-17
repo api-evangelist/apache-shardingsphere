@@ -33,6 +33,20 @@ paths:
                 $ref: '#/components/schemas/ClusterStatus'
 components:
   schemas:
+    ClusterStatus:
+      type: object
+      description: ShardingSphere cluster status
+      properties:
+        mode:
+          type: string
+          enum:
+          - Standalone
+          - Cluster
+          description: Deployment mode
+        instances:
+          type: array
+          items:
+            $ref: '#/components/schemas/Instance'
     Instance:
       type: object
       description: ShardingSphere Proxy instance
@@ -52,17 +66,3 @@ components:
         port:
           type: integer
           description: Port number
-    ClusterStatus:
-      type: object
-      description: ShardingSphere cluster status
-      properties:
-        mode:
-          type: string
-          enum:
-          - Standalone
-          - Cluster
-          description: Deployment mode
-        instances:
-          type: array
-          items:
-            $ref: '#/components/schemas/Instance'

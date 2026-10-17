@@ -40,6 +40,24 @@ paths:
                 $ref: '#/components/schemas/ShardingRuleList'
 components:
   schemas:
+    ShardingStrategy:
+      type: object
+      description: Sharding strategy definition
+      properties:
+        type:
+          type: string
+          enum:
+          - standard
+          - complex
+          - hint
+          - none
+          description: Strategy type
+        shardingColumn:
+          type: string
+          description: Column used for sharding
+        shardingAlgorithmName:
+          type: string
+          description: Sharding algorithm reference
     ShardingRule:
       type: object
       description: Sharding rule for a logical table
@@ -71,24 +89,6 @@ components:
           $ref: '#/components/schemas/ShardingStrategy'
         tableStrategy:
           $ref: '#/components/schemas/ShardingStrategy'
-    ShardingStrategy:
-      type: object
-      description: Sharding strategy definition
-      properties:
-        type:
-          type: string
-          enum:
-          - standard
-          - complex
-          - hint
-          - none
-          description: Strategy type
-        shardingColumn:
-          type: string
-          description: Column used for sharding
-        shardingAlgorithmName:
-          type: string
-          description: Sharding algorithm reference
     ShardingRuleList:
       type: object
       description: List of sharding rules
