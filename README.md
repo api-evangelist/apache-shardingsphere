@@ -1,4 +1,4 @@
-# Apache ShardingSphere (apache-shardingsphere)
+# Apache ShardingSphere
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,122 +66,198 @@
 
 Apache ShardingSphere is an open-source ecosystem for distributed database systems providing data sharding, distributed transactions, and database governance. It supports MySQL, PostgreSQL, and other databases with transparent sharding capabilities.
 
-**URL:** [https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/apache-shardingsphere/refs/heads/main/apis.yml)
+**Areas:** Database · Distributed SQL · Read-Write Splitting · Sharding · SQL · Apache · Open Source
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Apache ShardingSphere on APIs.io
 
-## Tags:
+Everything profiled for Apache ShardingSphere is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/apache-shardingsphere/](https://apis.io/providers/apache-shardingsphere/)** — or go straight to one of the APIs or properties below.
 
- - Database, Distributed SQL, Read-Write Splitting, Sharding, SQL, Apache, Open Source
+### APIs (5)
 
-## Timestamps
+- [Apache ShardingSphere Cluster API](https://apis.io/apis/apache-shardingsphere/apache-shardingsphere-cluster-api/) — The Cluster API from Apache ShardingSphere — 1 operation(s) for cluster.
+- [Apache ShardingSphere Databases API](https://apis.io/apis/apache-shardingsphere/apache-shardingsphere-databases-api/) — The Databases API from Apache ShardingSphere — 2 operation(s) for databases.
+- [Apache ShardingSphere ReadwriteSplitting API](https://apis.io/apis/apache-shardingsphere/apache-shardingsphere-readwritesplitting-api/) — The ReadwriteSplitting API from Apache ShardingSphere — 1 operation(s) for readwritesplitting.
+- [Apache ShardingSphere ShardingRules API](https://apis.io/apis/apache-shardingsphere/apache-shardingsphere-shardingrules-api/) — The ShardingRules API from Apache ShardingSphere — 1 operation(s) for shardingrules.
+- [Apache ShardingSphere Data Sources API](https://apis.io/apis/apache-shardingsphere/apache-shardingsphere-data-sources-api/) — The Data Sources API from Apache ShardingSphere — 1 operation(s) for data sources.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Apache ShardingSphere REST API
-ShardingSphere provides REST endpoints for managing logical databases, physical data sources, sharding rules, read-write splitting configuration, and cluster status via the ShardingSphere Proxy admin API.
+#### Agentic access (1)
 
-**Human URL:** [https://shardingsphere.apache.org/document/current/](https://shardingsphere.apache.org/document/current/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags:
+- [Apache Shardingsphere Agentic Access](https://apis.io/agentic-access/apache-shardingsphere/apache-shardingsphere-agentic-access/)
 
- - Database, Distributed SQL, REST, Apache, Open Source
+#### JSON Schema (14)
 
-#### Properties
+The data models the API reads and writes.
 
-- [Documentation](https://shardingsphere.apache.org/document/current/)
-- [OpenAPI](openapi/apache-shardingsphere-rest-api.yaml)
+- [ClusterStatus](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-cluster-status/)
+- [DataSource](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-data-source/)
+- [DataSourceList](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-data-source-list/)
+- [DataSourceRequest](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-data-source-request/)
+- [Database](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-database/)
+- [DatabaseList](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-database-list/)
+- [DatabaseRequest](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-database-request/)
+- [Instance](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-instance/)
+- [ReadwriteSplittingRule](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-readwrite-splitting-rule/)
+- [ReadwriteSplittingRuleList](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-readwrite-splitting-rule-list/)
+- [ShardingRule](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-sharding-rule/)
+- [ShardingRuleList](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-sharding-rule-list/)
+- [ShardingStrategy](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-sharding-strategy/)
+- [ShardingTable](https://apis.io/schemas/apache-shardingsphere/apache-shardingsphere-sharding-table/)
 
-## Common Properties
+#### JSON Structure (14)
 
-- [GitHubOrganization](https://github.com/apache/shardingsphere)
+Data models expressed in JSON Structure.
+
+- [Apache Shardingsphere Cluster Status Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-cluster-status-structure/)
+- [Apache Shardingsphere Data Source List Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-data-source-list-structure/)
+- [Apache Shardingsphere Data Source Request Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-data-source-request-structure/)
+- [Apache Shardingsphere Data Source Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-data-source-structure/)
+- [Apache Shardingsphere Database List Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-database-list-structure/)
+- [Apache Shardingsphere Database Request Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-database-request-structure/)
+- [Apache Shardingsphere Database Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-database-structure/)
+- [Apache Shardingsphere Instance Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-instance-structure/)
+- [Apache Shardingsphere Readwrite Splitting Rule List Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-readwrite-splitting-rule-list-structure/)
+- [Apache Shardingsphere Readwrite Splitting Rule Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-readwrite-splitting-rule-structure/)
+- [Apache Shardingsphere Sharding Rule List Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-sharding-rule-list-structure/)
+- [Apache Shardingsphere Sharding Rule Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-sharding-rule-structure/)
+- [Apache Shardingsphere Sharding Strategy Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-sharding-strategy-structure/)
+- [Apache Shardingsphere Sharding Table Structure](https://apis.io/json-structure/apache-shardingsphere/apache-shardingsphere-sharding-table-structure/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Apache Shardingsphere Context](https://apis.io/jsonld/apache-shardingsphere/apache-shardingsphere-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Apache ShardingSphere Vocabulary](https://apis.io/vocabularies/apache-shardingsphere/apache-shardingsphere-vocabulary/)
+
+#### Examples (14)
+
+Example requests and responses.
+
+- [Apache Shardingsphere Cluster Status Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-cluster-status-example/)
+- [Apache Shardingsphere Data Source Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-data-source-example/)
+- [Apache Shardingsphere Data Source List Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-data-source-list-example/)
+- [Apache Shardingsphere Data Source Request Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-data-source-request-example/)
+- [Apache Shardingsphere Database Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-database-example/)
+- [Apache Shardingsphere Database List Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-database-list-example/)
+- [Apache Shardingsphere Database Request Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-database-request-example/)
+- [Apache Shardingsphere Instance Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-instance-example/)
+- [Apache Shardingsphere Readwrite Splitting Rule Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-readwrite-splitting-rule-example/)
+- [Apache Shardingsphere Readwrite Splitting Rule List Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-readwrite-splitting-rule-list-example/)
+- [Apache Shardingsphere Sharding Rule Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-sharding-rule-example/)
+- [Apache Shardingsphere Sharding Rule List Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-sharding-rule-list-example/)
+- [Apache Shardingsphere Sharding Strategy Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-sharding-strategy-example/)
+- [Apache Shardingsphere Sharding Table Example](https://apis.io/examples/apache-shardingsphere/apache-shardingsphere-sharding-table-example/)
+
+#### Collections (5)
+
+Postman and Open Collection request collections.
+
+- [Apache ShardingSphere REST Cluster API](https://apis.io/collections/apache-shardingsphere/open-apache-shardingsphere-cluster-api/)
+- [Apache ShardingSphere REST Cluster Databases API](https://apis.io/collections/apache-shardingsphere/open-apache-shardingsphere-databases-api/)
+- [Apache ShardingSphere REST Cluster DataSources API](https://apis.io/collections/apache-shardingsphere/open-apache-shardingsphere-datasources-api/)
+- [Apache ShardingSphere REST Cluster ReadwriteSplitting API](https://apis.io/collections/apache-shardingsphere/open-apache-shardingsphere-readwritesplitting-api/)
+- [Apache ShardingSphere REST Cluster ShardingRules API](https://apis.io/collections/apache-shardingsphere/open-apache-shardingsphere-shardingrules-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Apache ShardingSphere — jsonschema rules](https://apis.io/rules/apache-shardingsphere/apache-shardingsphere-jsonschema-spectral-rules/)
+- [Apache ShardingSphere API Rules](https://apis.io/rules/apache-shardingsphere/apache-shardingsphere-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Apache Shardingsphere Domain Security](https://apis.io/security/apache-shardingsphere/apache-shardingsphere-domain-security/)
+- [Apache Shardingsphere Vulnerability Disclosure](https://apis.io/security/apache-shardingsphere/apache-shardingsphere-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Apache Shardingsphere Plans Pricing](https://apis.io/plans/apache-shardingsphere/apache-shardingsphere-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Apache Shardingsphere Rate Limits](https://apis.io/rate-limits/apache-shardingsphere/apache-shardingsphere-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Apache Shardingsphere Finops](https://apis.io/finops/apache-shardingsphere/apache-shardingsphere-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://apache.org)
 - [Documentation](https://shardingsphere.apache.org/)
-- [SpectralRules](rules/apache-shardingsphere-spectral-rules.yml)
-- [Vocabulary](vocabulary/apache-shardingsphere-vocabulary.yaml)
-- [NaftikoCapability](capabilities/shardingsphere-workflow.yaml)
-- [JSON-LD](json-ld/apache-shardingsphere-context.jsonld)
+- [GitHub](https://github.com/apache/shardingsphere)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Database Sharding | Horizontal database sharding with flexible sharding algorithms |
-| Read-Write Splitting | Transparent primary/replica read-write splitting |
-| Distributed Transactions | XA and BASE distributed transaction support |
-| Data Encryption | Transparent data encryption at the SQL layer |
-| Shadow Database | Shadow database for production traffic testing |
-| DistSQL | SQL-based distributed database management language |
-| Database Federation | Query across heterogeneous database instances |
+**Kin Score 25.3** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 47.9 |
+| Contract governance | 27.3 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 7.9 |
 
-| Name | Description |
-|------|-------------|
-| Database Scale-Out | Horizontally scale relational databases without changing application code |
-| Multi-Tenant Sharding | Shard data by tenant ID for SaaS applications |
-| Read Scaling | Scale read traffic with primary/replica splitting |
-| Data Migration | Online data migration between database clusters |
+**Agent readiness 15.4** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| MySQL | MySQL-compatible sharding and proxy |
-| PostgreSQL | PostgreSQL protocol support for sharding |
-| Apache ZooKeeper | Cluster coordination and configuration storage |
-| Spring Boot | ShardingSphere Spring Boot starter for Java applications |
-| Kubernetes | Kubernetes operator for cloud-native deployment |
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/apache-shardingsphere/](https://apis.io/providers/apache-shardingsphere/).
 
-Machine-readable API specifications organized by format.
+## How this profile is made
 
-### OpenAPI
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-- [Apache ShardingSphere REST API](openapi/apache-shardingsphere-rest-api.yaml)
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Apache ShardingSphere: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### JSON Schema
+## Open an issue
 
-- [Database](json-schema/apache-shardingsphere-database-schema.json)
-- [Sharding Rule](json-schema/apache-shardingsphere-sharding-rule-schema.json)
-- [Data Source](json-schema/apache-shardingsphere-data-source-schema.json)
-- [And more...](json-schema/)
-
-### JSON Structure
-
-- [Apache ShardingSphere JSON Structures](json-structure/)
-
-### JSON-LD
-
-- [Apache ShardingSphere Context](json-ld/apache-shardingsphere-context.jsonld)
-
-### Examples
-
-- [Apache ShardingSphere Examples](examples/)
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions composed into customer-facing workflows.
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Distributed SQL Workflow](capabilities/shardingsphere-workflow.yaml) | Apache ShardingSphere | 7 | Database Administrator, Platform Engineer |
-
-## Vocabulary
-
-- [Apache ShardingSphere Vocabulary](vocabulary/apache-shardingsphere-vocabulary.yaml) — Unified taxonomy mapping distributed SQL resources, actions, workflows, and personas
-
-## Rules
-
-- [Apache ShardingSphere Spectral Rules](rules/apache-shardingsphere-spectral-rules.yml) — Rules enforcing Apache ShardingSphere API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/apache-shardingsphere/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
